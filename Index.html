@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open WhatsApp</title>
+</head>
+<style>
+  *{
+    padding:0px;
+    margin:0px;
+    
+  }
+  button{
+    width:200px;
+    height:120px;
+    background-color:green;
+    color:white;
+    text-align:center;
+    font-weight:bold;
+    font-size:32px;
+    border-radius:10px;
+   position:absolute;
+   transform:translate(-50%,-50%);
+   top:50%;
+   left:50%;
+   box-shadow:1px 1px 20px grey;
+   border:none;
+   border-right: 1px solid white;
+   border-bottom: 1px solid white;
+   text-transform:uppercase;
+   letter-spacing: 2px;
+    
+  }
+  button:hover{
+    opacity:0.8;
+    border:1px solid green;
+   
+  }
+</style>
+<body>
+  <button id="openWhatsApp">Open </button>
+
+  <script>
+    document.getElementById('openWhatsApp').addEventListener('click', function() {
+      const phoneNumber = '9556569075'; // Replace with the target phone number (including country code)
+      const url = `https://wa.me/${phoneNumber}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>
